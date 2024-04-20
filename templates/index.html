@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutrition Facts</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+    /* Reset CSS */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+    }
+
+    header {
+        background-color: #f8f9fa;
+        padding: 20px;
+        text-align: center;
+    }
+
+    nav ul {
+        list-style-type: none;
+    }
+
+    nav ul li {
+        display: inline;
+        margin-right: 20px;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: #333;
+    }
+
+    .hero {
+        background-image: url('hero-image.jpg');
+        background-size: cover;
+        color: #fff;
+        text-align: center;
+        padding: 100px 0;
+    }
+
+    .featured {
+        text-align: center;
+        padding: 50px 0;
+    }
+
+    .featured h2 {
+        margin-bottom: 20px;
+    }
+
+    .btn {
+        display: inline-block;
+        background-color: #ff6600;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+    }
+
+    footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .food-category {
+        margin-bottom: 20px;
+    }
+
+    .food-block {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .food-block a {
+        display: block;
+        width: 125px;
+        height: 125px;
+        background-color: #f8f9fa;
+        padding: 10px;
+        border-radius: 5px;
+        text-decoration: none;
+        color: #333;
+    }
+
+    .food-block a:hover {
+        background-color: #e9ecef;
+    }
+    </style>
+</head>
+<body>
+    <header class="container">
+        <h1>Nutrition Facts</h1>
+        <div class="search-bar" style="margin-left: 390px;">
+            <form class="form-inline">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search...">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+        <nav style="margin-left: 150px;">
+            <ul class="nav">
+                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Fruits</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Vegetables</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Other Foods</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="container content">
+        <hr>
+        <h2 style="margin-left: 280px;">Explore Nutritional Information</h2>
+        <p style="margin-left: 200px;">Discover the nutritional values of various fruits, vegetables, and other foods.</p>
+        <div  style="margin-left: 150px;">
+            <hr>
+            <div class="food-category">
+                <h3>Fruits</h3>
+                <div class="food-block">
+                    <a class="btn btn-outline-primary" href="/apple"><img src="/static/images/apple_image.jpg" style="height: auto; width: 90px;">Apple</a>
+                    <a class="btn btn-outline-primary" href="/banana">Banana</a>
+                    <a class="btn btn-outline-primary" href="/Orange"><img src="/static/images/orange_image.jpg" style="height: auto; width: 90px;">Orange</a>
+                    <a class="btn btn-outline-primary" href="/Mango">Mango</a>
+                    <a class="btn btn-outline-primary" href="/Strawberry">Strawberry</a>
+                    <a class="btn btn-outline-primary" href="/Watermelon">Watermelon</a>
+                    <!-- Add more fruits here -->
+                </div>
+            </div>
+            <hr>
+            <div class="food-category">
+                <h3>Vegetables</h3>
+                <div class="food-block">
+                    <a class="btn btn-outline-primary" href="/Spinach">Spinach</a>
+                    <a class="btn btn-outline-primary" href="/Carrot">Carrot</a>
+                    <a class="btn btn-outline-primary" href="/Broccoli">Broccoli</a>
+                    <a class="btn btn-outline-primary" href="/Tomato">Tomato</a>
+                    <a class="btn btn-outline-primary" href="/Cucumber">Cucumber</a>
+                    <a class="btn btn-outline-primary" href="/Bell Pepper">Bell Pepper</a>
+                    <!-- Add more vegetables here -->
+                </div>
+            </div>
+            <div class="food-category">
+                <hr>
+                <h3>Other Foods</h3>
+                <div class="food-block">
+                    <a class="btn btn-outline-primary" href="/Salmon">Salmon</a>
+                    <a class="btn btn-outline-primary" href="/Cheese">Cheese</a>
+                    <a class="btn btn-outline-primary" href="/Rice">Rice</a>
+                    <a class="btn btn-outline-primary" href="/Pasta">Pasta</a>
+                    <a class="btn btn-outline-primary" href="/Beans">Beans</a>
+                    <a class="btn btn-outline-primary" href="/Burger"><img src="/static/images/burger_image.jpg" style="height: auto; width: 90px;">Burger</a>
+                    <!-- Add more food items here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="container">
+        <p>&copy; 2024 Nutrition Facts</p>
+    </footer>
+</body>
+</html>

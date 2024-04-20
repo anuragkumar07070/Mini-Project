@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banana Attributes</title>
+    <style>
+        /* Add CSS styles for the large banana image */
+        .banana-image {
+            width: 300px;
+            height: auto;
+            display: block;
+            margin: 0 auto; /* Centers the image */
+        }
+    </style>
+</head>
+<body>
+    <h1>Banana Attributes</h1>
+    <!-- Large image of a banana -->
+    <img class="banana-image" src="banana_image.jpg" alt="Banana">
+
+    <!-- Attributes -->
+    <ul>
+        <li>Protein: {{ banana.protein }}</li>
+        <li>Carbs: {{ banana.carbs }}</li>
+        <li>Fats: {{ banana.fats }}</li>
+        <li>Sugar: {{ banana.sugar }}</li>
+        <li>Fiber: {{ banana.fiber }}</li>
+        <li>Calories: {{ banana.calories }}</li>
+    </ul>
+</body>
+</html>

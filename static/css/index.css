@@ -7,6 +7,8 @@
 
     body {
         font-family: Arial, sans-serif;
+        justify-content: center;
+        align-items: center;
     }
 
     header {
@@ -14,9 +16,22 @@
         padding: 20px;
         text-align: center;
     }
+    .search-bar .form-control {
+        width: 300px; /* Adjust the width as needed */
+    }
+    
+    .search-bar .btn-outline-success {
+        background-color: #28a745; /* Change to desired background color */
+        color: #fff; /* Change to desired text color */
+        padding: 7px 15px; /* Adjust padding as needed */
+        border-radius: 5px; /* Optional: Add border radius for button */
+        font-size: 14px; /* Adjust font size as needed */
+    }
+    
 
     nav ul {
         list-style-type: none;
+        margin-right: 50px;
     }
 
     nav ul li {

@@ -1,111 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nutrition Facts</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-    /* Reset CSS */
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    body {
-        font-family: Arial, sans-serif;
-    }
-
-    header {
-        background-color: #f8f9fa;
-        padding: 20px;
-        text-align: center;
-    }
-
-    nav ul {
-        list-style-type: none;
-    }
-
-    nav ul li {
-        display: inline;
-        margin-right: 20px;
-    }
-
-    nav ul li a {
-        text-decoration: none;
-        color: #333;
-    }
-
-    .hero {
-        background-image: url('hero-image.jpg');
-        background-size: cover;
-        color: #fff;
-        text-align: center;
-        padding: 100px 0;
-    }
-
-    .featured {
-        text-align: center;
-        padding: 50px 0;
-    }
-
-    .featured h2 {
-        margin-bottom: 20px;
-    }
-
-    .btn {
-        display: inline-block;
-        background-color: #ff6600;
-        color: #fff;
-        padding: 10px 20px;
-        border-radius: 5px;
-        text-decoration: none;
-    }
-
-    footer {
-        background-color: #333;
-        color: #fff;
-        text-align: center;
-        padding: 20px;
-    }
-
-    .food-category {
-        margin-bottom: 20px;
-    }
-
-    .food-block {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-
-    .food-block a {
-        display: block;
-        width: 125px;
-        height: 125px;
-        background-color: #f8f9fa;
-        padding: 10px;
-        border-radius: 5px;
-        text-decoration: none;
-        color: #333;
-    }
-
-    .food-block a:hover {
-        background-color: #e9ecef;
-    }
-    </style>
+    <link rel="stylesheet" href="/static/css/index.css">
 </head>
+
 <body>
     <header class="container">
         <h1>Nutrition Facts</h1>
-        <div class="search-bar" style="margin-left: 390px;">
-            <form class="form-inline">
-                <input class="form-control mr-sm-2" type="text" placeholder="Search...">
+        <div class="search-bar" style="margin-left: 390px; margin-bottom: 20px;">
+            <form class="form-inline" action="/search" method="get">
+                <input class="form-control mr-sm-2" name="q" type="text" placeholder="Search..." required>
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
             </form>
         </div>
-        <nav style="margin-left: 150px;">
+
+        <nav style="margin-left: 220px;">
             <ul class="nav">
                 <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Fruits</a></li>
@@ -116,49 +30,69 @@
             </ul>
         </nav>
     </header>
-    
+
     <section class="container content">
         <hr>
-        <h2 style="margin-left: 280px;">Explore Nutritional Information</h2>
-        <p style="margin-left: 200px;">Discover the nutritional values of various fruits, vegetables, and other foods.</p>
-        <div  style="margin-left: 150px;">
+        <h2 style="margin-left: 340px;">Explore Nutritional Information</h2>
+        <p style="margin-left: 280px;">Discover the nutritional values of various fruits, vegetables, and other foods.
+        </p>
+        <div style="margin-left: 150px;">
             <hr>
             <div class="food-category">
                 <h3>Fruits</h3>
                 <div class="food-block">
-                    <a class="btn btn-outline-primary" href="/apple" target="_blank"><img src="/static/images/apple_image.jpg" style="height: auto; width: 90px;">Apple</a>
-                    <a class="btn btn-outline-primary" href="/banana"><img src="/static/images/banana_image.jpg" style="height: auto; width: 90px;">Banana</a>
-                    <a class="btn btn-outline-primary" href="/Orange"><img src="/static/images/orange_image.jpg" style="height: auto; width: 90px;">Orange</a>
-                    <a class="btn btn-outline-primary" href="/Mango"><img src="/static/images/mango_image.jpg" style="height: auto; width: 90px;">Mango</a>
-                    <a class="btn btn-outline-primary" href="/Strawberry"><img src="/static/images/Strawberry_image.jpg" style="height: auto; width: 90px;">Strawberry</a>
-                    <a class="btn btn-outline-primary" href="/Watermelon"><img src="/static/images/watermelon_image.jpg" style="height: auto; width: 90px;">Watermelon</a>
-                   
+                    <a class="btn btn-outline-primary" href="/apple" target="_blank"><img
+                            src="/static/images/apple_image.jpg" style="height: auto; width: 90px;">Apple</a>
+                    <a class="btn btn-outline-primary" href="/banana"><img src="/static/images/banana_image.jpg"
+                            style="height: auto; width: 90px;">Banana</a>
+                    <a class="btn btn-outline-primary" href="/Orange"><img src="/static/images/orange_image.jpg"
+                            style="height: auto; width: 90px;">Orange</a>
+                    <a class="btn btn-outline-primary" href="/Mango"><img src="/static/images/mango_image.jpg"
+                            style="height: auto; width: 90px;">Mango</a>
+                    <a class="btn btn-outline-primary" href="/Strawberry"><img src="/static/images/Strawberry_image.jpg"
+                            style="height: auto; width: 90px;">Strawberry</a>
+                    <a class="btn btn-outline-primary" href="/Watermelon"><img src="/static/images/watermelon_image.jpg"
+                            style="height: auto; width: 90px;">Watermelon</a>
+
                 </div>
             </div>
             <hr>
             <div class="food-category">
                 <h3>Vegetables</h3>
                 <div class="food-block">
-                    <a class="btn btn-outline-primary" href="/Spinach"><img src="/static/images/spinach_image.jpg" style="height: auto; width: 90px;">Spinach</a>
-                    <a class="btn btn-outline-primary" href="/Carrot"><img src="/static/images/Carrot_image.jpg" style="height: auto; width: 90px;">Carrot</a>
-                    <a class="btn btn-outline-primary" href="/Broccoli"><img src="/static/images/Broccoli_image.jpg" style="height: auto; width: 90px;">Broccoli</a>
-                    <a class="btn btn-outline-primary" href="/Tomato"><img src="/static/images/tomato_image.jpg" style="height: auto; width: 90px;">Tomato</a>
-                    <a class="btn btn-outline-primary" href="/Cucumber"><img src="/static/images/cucumber_image.jpg" style="height: auto; width: 90px;">Cucumber</a>
-                    <a class="btn btn-outline-primary" href="/Bell Pepper"><img src="/static/images/Bell Pepper_image.jpg" style="height: auto; width: 90px;">Bell Pepper</a>
-                 
+                    <a class="btn btn-outline-primary" href="/Spinach"><img src="/static/images/spinach_image.jpg"
+                            style="height: auto; width: 90px;">Spinach</a>
+                    <a class="btn btn-outline-primary" href="/Carrot"><img src="/static/images/Carrot_image.jpg"
+                            style="height: auto; width: 90px;">Carrot</a>
+                    <a class="btn btn-outline-primary" href="/Broccoli"><img src="/static/images/Broccoli_image.jpg"
+                            style="height: auto; width: 90px;">Broccoli</a>
+                    <a class="btn btn-outline-primary" href="/Tomato"><img src="/static/images/tomato_image.jpg"
+                            style="height: auto; width: 90px;">Tomato</a>
+                    <a class="btn btn-outline-primary" href="/Cucumber"><img src="/static/images/cucumber_image.jpg"
+                            style="height: auto; width: 90px;">Cucumber</a>
+                    <a class="btn btn-outline-primary" href="/Bell Pepper"><img
+                            src="/static/images/Bell Pepper_image.jpg" style="height: auto; width: 90px;">Bell
+                        Pepper</a>
+
                 </div>
             </div>
             <div class="food-category">
                 <hr>
                 <h3>Other Foods</h3>
                 <div class="food-block">
-                    <a class="btn btn-outline-primary" href="/Salmon"><img src="/static/images/salmon_image.jpg" style="height: auto; width: 90px;">Salmon</a>
-                    <a class="btn btn-outline-primary" href="/Cheese"><img src="/static/images/cheese_image.jpg" style="height: auto; width: 90px;">Cheese</a>
-                    <a class="btn btn-outline-primary" href="/Rice"><img src="/static/images/rice_image.jpg" style="height: auto; width: 90px;">Rice</a>
-                    <a class="btn btn-outline-primary" href="/Pasta"><img src="/static/images/pasta_image.jpg" style="height: auto; width: 90px;">Pasta</a>
-                    <a class="btn btn-outline-primary" href="/Beans"><img src="/static/images/beans_image.jpg" style="height: auto; width: 90px;">Beans</a>
-                    <a class="btn btn-outline-primary" href="/Burger"><img src="/static/images/burger_image.jpg" style="height: auto; width: 90px;">Burger</a>
-                 
+                    <a class="btn btn-outline-primary" href="/Salmon"><img src="/static/images/salmon_image.jpg"
+                            style="height: auto; width: 90px;">Salmon</a>
+                    <a class="btn btn-outline-primary" href="/Cheese"><img src="/static/images/cheese_image.jpg"
+                            style="height: auto; width: 90px;">Cheese</a>
+                    <a class="btn btn-outline-primary" href="/Rice"><img src="/static/images/rice_image.jpg"
+                            style="height: auto; width: 90px;">Rice</a>
+                    <a class="btn btn-outline-primary" href="/Pasta"><img src="/static/images/pasta_image.jpg"
+                            style="height: auto; width: 90px;">Pasta</a>
+                    <a class="btn btn-outline-primary" href="/Beans"><img src="/static/images/beans_image.jpg"
+                            style="height: auto; width: 90px;">Beans</a>
+                    <a class="btn btn-outline-primary" href="/Burger"><img src="/static/images/burger_image.jpg"
+                            style="height: auto; width: 90px;">Burger</a>
+
                 </div>
             </div>
         </div>
@@ -167,5 +101,28 @@
     <footer class="container">
         <p>&copy; 2024 Nutrition Facts</p>
     </footer>
+    <script>
+        document.getElementById('search-form').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the form from submitting through the browser
+
+            var searchText = document.getElementById('search-input').value.toLowerCase(); // Get the search text
+            var found = false;
+            var links = document.querySelectorAll('.food-block a'); // Get all links in the food blocks
+
+            links.forEach(function (link) {
+                var foodName = link.textContent.trim().toLowerCase();
+                if (foodName === searchText) {
+                    found = true;
+                    alert('Found: ' + searchText);
+                    window.location.href = link.href; // Redirect to the food detail page
+                }
+            });
+
+            if (!found) {
+                alert('No results found for "' + searchText + '"');
+            }
+        });
+    </script>
 </body>
+
 </html>

@@ -5,73 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ food.Food }} Attributes</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-
-    /* Resetting default margin and padding */
-    body, h1, h2, h3, ul, li {
-        margin: 0;
-        padding: 0;
-    }
-
-    /* Basic styling */
-    body {
-        font-family: Arial, sans-serif;
-        background-color: #f2f2f2;
-    }
-
-    header {
-        background-color: #333;
-        color: #fff;
-        padding: 20px;
-        text-align: center;
-    }
-
-    .content {
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 20px;
-    }
-
-    h2 {
-        color: #333;
-        margin-bottom: 20px;
-    }
-
-    img {
-        display: block;
-        margin: 0 auto;
-        border-radius: 10px;
-    }
-
-    .nutrition-info {
-        background-color: #fff;
-        border-radius: 10px;
-        padding: 20px;
-        margin-top: 20px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .nutrition-info h3 {
-        color: #333;
-        margin-bottom: 10px;
-    }
-
-    ul {
-        list-style-type: none;
-    }
-
-    li {
-        margin-bottom: 5px;
-    }
-
-    footer {
-        background-color: #333;
-        color: #fff;
-        padding: 20px;
-        text-align: center;
-    }
-    
-    </style>
+    <link rel="stylesheet" href="/static/css/food.css">
 </head>
 <body>
     <div class="container">
@@ -83,10 +17,10 @@
         <div class="nutrition-info mt-5">
             <h3>Nutritional Information</h3>
             <ul class="list-unstyled">
-                <li>Protein: {{ food.Protein }}</li>
-                <li>Carbs: {{ food.Carbohydrates }}</li>
-                <li>Fats: {{ food.Fat }}</li>
-                <li>Calories: {{ food.Calories }}</li>
+                <li>Protein: {{ food.Protein }}g</li>
+                <li>Carbs: {{ food.Carbohydrates }}g</li>
+                <li>Fats: {{ food.Fat }}g</li>
+                <li>Calories: {{ food.Calories }}kcal</li>
             </ul>
         </div>
     </div>

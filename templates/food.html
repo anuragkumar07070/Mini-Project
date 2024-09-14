@@ -76,7 +76,6 @@
 <body>
     <div class="container">
         <h1 class="mt-5">{{ food.Food }} Attributes</h1>
-        <!-- Large image of the food -->
         <img class="food-image img-fluid mt-3" src="{{ url_for('static', filename='images/' + food.Food.lower() + '_image.jpg') }}" alt="{{ food.Food }}" style="width: 300px; height: auto;">
 
         <!-- Attributes -->

@@ -2,13 +2,7 @@ from flask import Flask, render_template
 import csv
 
 app = Flask(__name__)
-<<<<<<< Updated upstream
 
-=======
-app.secret_key = 'H&$!M0m68hG#!bkgdl'
-
-import csv
->>>>>>> Stashed changes
 # Function to read food attributes from CSV file
 def read_food_attributes(food_name):
     with open('dataset.csv', newline='') as csvfile:
